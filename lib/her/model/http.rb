@@ -77,7 +77,7 @@ module Her
                   new_collection(parsed_data)
                 else
                   return nil if parsed_data[:data].empty? 
-                  new(parse(data).merge :_metadata => parsed_data[:metadata], :_errors => parsed_data[:errors])
+                  new(parse(parsed_data[:data]).merge :_metadata => parsed_data[:metadata], :_errors => parsed_data[:errors])
                 end
               end
             end
